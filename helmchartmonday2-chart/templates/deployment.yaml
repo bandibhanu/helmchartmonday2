@@ -6,15 +6,15 @@ spec:
   replicas: 1
   selector:
     matchLabels:
-      app: helmchartmonday
+      app: helmchartmonday2
   template:
     metadata:
       labels:
-        app: helmchartmonday
+        app: helmchartmonday2
     spec:
       containers:
-      - name: helmchartmonday
-        image: helmchartmondaycontainer.azurecr.io/bhanu9505508737/helmchartmonday:#{Build.BuildId}#
+      - name: helmchartmonday2
+        image: helmchartmondaycontainer.azurecr.io/bhanu9505508737/helmchartmonday2:#{Build.BuildId}#
         ports:
         - containerPort: 80
         env:

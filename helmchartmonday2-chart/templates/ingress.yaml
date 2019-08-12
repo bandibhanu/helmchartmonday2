@@ -1,12 +1,12 @@
 {{- if .Values.ingress.enabled -}}
-{{- $fullName := include "helmchartmonday-chart.fullname" . -}}
+{{- $fullName := include "helmchartmonday2-chart.fullname" . -}}
 {{- $svcPort := .Values.service.port -}}
 apiVersion: extensions/v1beta1
 kind: Ingress
 metadata:
   name: {{ $fullName }}
   labels:
-{{ include "helmchartmonday-chart.labels" . | indent 4 }}
+{{ include "helmchartmonday2-chart.labels" . | indent 4 }}
   {{- with .Values.ingress.annotations }}
   annotations:
     {{- toYaml . | nindent 4 }}
